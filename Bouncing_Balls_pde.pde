@@ -16,7 +16,7 @@ void setup() {
   //fullScreen(P2D);
   size(640, 360, P2D);
   for(int i=0; i<b.length; i++){
-    b[i] = new Ball(random(255), random(255), random(255));
+    b[i] = new Ball();
   }
 }
 
