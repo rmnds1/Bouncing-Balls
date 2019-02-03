@@ -11,10 +11,10 @@ class Ball{
   int index;
 
   Ball(){
-    x = random(width);
-    y = random(height);
-    xSpeed = random(3);
-    ySpeed = random(4);
+    x = random(width/2, width/3);
+    y = random(height/2, height/3);
+    xSpeed = random(-3, 3);
+    ySpeed = random(-4, 4);
     ballSize = random(15, 45);
     index = int(random(ballColor.length));
   }
@@ -31,13 +31,13 @@ class Ball{
   }
 
   void checkEdges() {
-    if (x > width || x < 0 ) {
+    if (x + (ballSize/2) > width || x - (ballSize/2) < 0 ) {
       xSpeed = xSpeed * -1;
       //fill(random(255), random(255), random(255));
       //ballSize = random(20, 60);
     }
 
-    if (y > height || y < 0) {
+    if (y + (ballSize/2) > height || y - (ballSize/2) < 0) {
       ySpeed = ySpeed * -1;
       //fill(random(255), random(255), random(255));
       //ballSize = random(20, 60);
