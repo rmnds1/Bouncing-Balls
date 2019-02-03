@@ -4,20 +4,16 @@ class Ball{
   float xSpeed;
   float ySpeed;
   float ballSize;
-  float colorR;
-  float colorG;
-  float colorB;
+  float colorR = int(random(255));
+  float colorG = int(random(255));
+  float colorB = int(random(255));
 
-  
-  Ball(float tempR, float tempG, float tempB){
+  Ball(){
     x = random(width);
     y = random(height);
     xSpeed = random(3);
     ySpeed = random(4);
     ballSize = random(15, 45);
-    colorR = tempR;
-    colorG = tempG;
-    colorB = tempB;
   }
 
   void displayBall() {
